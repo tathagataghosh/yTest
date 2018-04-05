@@ -1,6 +1,6 @@
 import java.nio.file.*
 
-defaultTasks 'addOnInstall', 'copyDbDriver'
+defaultTasks 'addOnInstall'
 
 repositories {
     mavenCentral()
@@ -10,9 +10,9 @@ configurations {
     hybris
 }
 
-dependencies {
-    hybris group: 'mysql', name: 'mysql-connector-java', version: '5.1.39'
-}
+//dependencies {
+//    hybris group: 'mysql', name: 'mysql-connector-java', version: '5.1.39'
+//}
 
 task addOnInstall(dependsOn: 'unpack') {
     onlyIf {
