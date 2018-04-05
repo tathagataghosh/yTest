@@ -1,0 +1,98 @@
+import java.nio.file.*
+
+defaultTasks 'addOnInstall', 'copyDbDriver'
+
+repositories {
+    mavenCentral()
+}
+
+configurations {
+    hybris
+}
+
+dependencies {
+    hybris group: 'mysql', name: 'mysql-connector-java', version: '5.1.39'
+}
+
+task addOnInstall(dependsOn: 'unpack') {
+    onlyIf {
+        project.addons?.trim()
+    }
+    outputs.upToDateWhen {
+        def result = true
+        project.addons.tokenize(',').each { addon ->
+            result &= file("../hybris/bin/ext-addon/$addon/project.properties").exists()
+        }
+        return result
+    }
+} << {
+    ant.ant(target: 'addoninstall', dir: '../hybris/bin/platform') {
+        property(name: 'addonnames', value: project.addons)
+        property(name: 'addonStorefront.yacceleratorstorefront', value: project.addonStorefrontTemplate)
+    }
+}
+
+
+task copyDbDriver(type:Copy, dependsOn: 'unpack')  {
+  from(configurations.hybris)
+  into '../hybris/bin/platform/lib/dbdriver'
+  include 'mysql-connector-java*.jar'
+}
+
+task unpack {
+    description 'Unpacks correct version of Hybris (overwriting existing)'
+
+    onlyIf {
+        logger.lifecycle 'Checking Hybris version'
+        File buildNumberFile = file('../hybris/bin/platform/build.number')
+        if (!buildNumberFile.exists()) {
+            logger.lifecycle 'No Hybris build.number file found'
+            return true
+        }
+        // check the version
+        String currentVersion
+        buildNumberFile.withReader { reader ->
+            Properties hybrisProps = new Properties()
+            hybrisProps.load(reader)
+            currentVersion = hybrisProps.version
+        }
+        logger.info "Current Hybris version: ${currentVersion}"
+        logger.info "Expected Hybris version: ${hybrisVersion}"
+        if (currentVersion != hybrisVersion) {
+            logger.lifecycle "Current Hybris version is $currentVersion when $hybrisVersion is expected"
+            return true
+        }
+        return false
+    }
+} << {
+    def hybrisRepository = project.hasProperty('hybrisRepository') ? project.hybrisRepository : System.env.HYBRIS_REPOSITORY
+
+    if (hybrisRepository == null) {
+        hybrisRepository = new File(System.getProperty("user.home"), "hybris_repository")
+    }
+    File hybrisArchive = new File(hybrisRepository, "hybris-commerce-suite-${hybrisVersion}.zip")
+    
+    if (!hybrisArchive.exists()) {
+      logger.error """********************************************************
+Can't find Hybris archive at configured location:
+${hybrisArchive.absolutePath}
+Make sure file exists!
+Change location with command line option -PhybrisRepository
+or environment variable HYBRIS_REPOSITORY
+********************************************************"""
+      throw new GradleException('Hybris archive not found')
+    }
+  
+    File dest = file('..')
+    println "Unpacking ${hybrisArchive.absoluteFile} into ${dest.absoluteFile}"
+    // Using ant unzip rather than Gradle copy from zipTree because that
+    // keeps a separate copy of the unzipped data in the build/tmp directory
+    // and the Hybris archive is very large.
+    ant.unzip (src: hybrisArchive, dest: dest) {
+        patternset( ) {
+            include( name: 'hybris/' )
+            exclude( name: 'hybris/bin/ext-integration/sap/' )
+            // todo add more excludes here
+        }
+    }
+}
