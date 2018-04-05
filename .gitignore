@@ -1,0 +1,66 @@
+/.eclipse
+/build/.gradle
+
+#ignore everything in hybris dir except bin and config
+/hybris/*
+!/hybris/bin/
+!/hybris/bin/**
+
+!/hybris/config/
+!/hybris/config/**
+
+#ignore everything in bin dir except custom
+/hybris/bin/*
+!/hybris/bin/custom/
+!/hybris/bin/custom/**
+
+#further ignore patterns
+eclipsebin/
+hmc.xsd
+build.xml
+classes/
+addons/
+commonwebsrc/
+addonsrc/
+gensrc/
+
+extensioninfo.xsd
+items.xsd
+beans.xsd
+wro_addons.xml
+
+platformhome.properties
+testclasses/
+*-testclasses.xml
+*-webtestclasses.xml
+*.class
+*hmc.jar
+*_bof.jar
+/hybris/config/solr/**/hsperfdata*
+
+# Ignore Mac OS X Finder specific files
+.DS_Store
+
+# Ignore everything in generated responsive directory
+**/web/webroot/_ui/responsive/*
+# Except images which are not generated
+!**/web/webroot/_ui/responsive/**/images
+# Also exclude these Hybris files which they've inconveniently left here
+!**/web/webroot/_ui/responsive/common/css/hybris.cms.live.edit.css
+
+#ignore the cockpit extension generated files
+**/sofastorefront/web/webroot/cockpit/*
+
+**/web/webroot/WEB-INF/_ui-src/responsive/themes/alpha/*
+**/web/webroot/WEB-INF/_ui-src/responsive/themes/lambda/*
+.idea
+*.css.map
+
+hybris/bin/custom/ubl/ublcommerceservices/.project
+hybris/bin/custom/ubl/ublcommerceservices/.springBeans
+hybris/bin/custom/ubl/ublcommerceservices/lib/kxml2-2.1.8.jar
+hybris/bin/custom/ubl/ublcommerceservices/web/webroot/WEB-INF/lib/cors-filter-1.8.jar
+hybris/bin/custom/ubl/ublcommerceservices/web/webroot/WEB-INF/lib/java-property-utils-1.9.jar
+hybris/bin/custom/ubl/ublcommerceservices/web/webroot/WEB-INF/lib/jstl-1.2.jar
+hybris/bin/custom/ubl/ublcommerceservices/web/webroot/WEB-INF/lib/stax-utils-20070216.jar
+
