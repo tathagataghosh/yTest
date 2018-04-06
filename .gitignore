@@ -51,8 +51,7 @@ testclasses/
 #ignore the cockpit extension generated files
 **/sofastorefront/web/webroot/cockpit/*
 
-**/web/webroot/WEB-INF/_ui-src/responsive/themes/alpha/*
-**/web/webroot/WEB-INF/_ui-src/responsive/themes/lambda/*
+
 .idea
 *.css.map
 
