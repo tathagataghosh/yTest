@@ -60,8 +60,6 @@
 		<extension
 			dir="${HYBRIS_BIN_DIR}/custom/yTest/yTestfacades" />
 		<extension
-			dir="${HYBRIS_BIN_DIR}/custom/yTest/yTesttest" />
-		<extension
 			dir="${HYBRIS_BIN_DIR}/custom/yTest/yTeststorefront" />
 		<extension
 			dir="${HYBRIS_BIN_DIR}/custom/yTest/yTestcockpits" />
