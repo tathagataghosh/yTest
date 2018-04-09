@@ -63,3 +63,4 @@ hybris/bin/custom/yTest/yTestcommerceservices/web/webroot/WEB-INF/lib/java-prope
 hybris/bin/custom/yTest/yTestcommerceservices/web/webroot/WEB-INF/lib/jstl-1.2.jar
 hybris/bin/custom/yTest/yTestcommerceservices/web/webroot/WEB-INF/lib/stax-utils-20070216.jar
 
+*.project
