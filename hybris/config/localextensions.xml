@@ -52,19 +52,17 @@
 
 		<!-- <extension name="yscala" /> -->
 		<extension
-			dir="C:\Users\amruthch\Downloads\hybris66\hybris\bin/custom/yTest/yTestfulfilmentprocess" />
+			dir="${HYBRIS_BIN_DIR}/custom/yTest/yTestfulfilmentprocess" />
 		<extension
-			dir="C:\Users\amruthch\Downloads\hybris66\hybris\bin/custom/yTest/yTestcore" />
+			dir="${HYBRIS_BIN_DIR}/custom/yTest/yTestcore" />
 		<extension
-			dir="C:\Users\amruthch\Downloads\hybris66\hybris\bin/custom/yTest/yTestinitialdata" />
+			dir="${HYBRIS_BIN_DIR}/custom/yTest/yTestinitialdata" />
 		<extension
-			dir="C:\Users\amruthch\Downloads\hybris66\hybris\bin/custom/yTest/yTestfacades" />
+			dir="${HYBRIS_BIN_DIR}/custom/yTest/yTestfacades" />
 		<extension
-			dir="C:\Users\amruthch\Downloads\hybris66\hybris\bin/custom/yTest/yTesttest" />
+			dir="${HYBRIS_BIN_DIR}/custom/yTest/yTeststorefront" />
 		<extension
-			dir="C:\Users\amruthch\Downloads\hybris66\hybris\bin/custom/yTest/yTeststorefront" />
-		<extension
-			dir="C:\Users\amruthch\Downloads\hybris66\hybris\bin/custom/yTest/yTestcockpits" />
+			dir="${HYBRIS_BIN_DIR}/custom/yTest/yTestcockpits" />
 
 
 	</extensions>

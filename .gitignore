@@ -49,17 +49,18 @@ testclasses/
 !**/web/webroot/_ui/responsive/common/css/hybris.cms.live.edit.css
 
 #ignore the cockpit extension generated files
-**/sofastorefront/web/webroot/cockpit/*
+**/yTeststorefront/web/webroot/cockpit/*
 
 
 .idea
 *.css.map
 
-hybris/bin/custom/ubl/ublcommerceservices/.project
-hybris/bin/custom/ubl/ublcommerceservices/.springBeans
-hybris/bin/custom/ubl/ublcommerceservices/lib/kxml2-2.1.8.jar
-hybris/bin/custom/ubl/ublcommerceservices/web/webroot/WEB-INF/lib/cors-filter-1.8.jar
-hybris/bin/custom/ubl/ublcommerceservices/web/webroot/WEB-INF/lib/java-property-utils-1.9.jar
-hybris/bin/custom/ubl/ublcommerceservices/web/webroot/WEB-INF/lib/jstl-1.2.jar
-hybris/bin/custom/ubl/ublcommerceservices/web/webroot/WEB-INF/lib/stax-utils-20070216.jar
+hybris/bin/custom/yTest/yTestcommerceservices/.project
+hybris/bin/custom/yTest/yTestcommerceservices/.springBeans
+hybris/bin/custom/yTest/yTestcommerceservices/lib/kxml2-2.1.8.jar
+hybris/bin/custom/yTest/yTestcommerceservices/web/webroot/WEB-INF/lib/cors-filter-1.8.jar
+hybris/bin/custom/yTest/yTestcommerceservices/web/webroot/WEB-INF/lib/java-property-utils-1.9.jar
+hybris/bin/custom/yTest/yTestcommerceservices/web/webroot/WEB-INF/lib/jstl-1.2.jar
+hybris/bin/custom/yTest/yTestcommerceservices/web/webroot/WEB-INF/lib/stax-utils-20070216.jar
 
+*.project
