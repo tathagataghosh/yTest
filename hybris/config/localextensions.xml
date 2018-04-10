@@ -17,10 +17,10 @@
 
 		<extension name="solrserver" />
 		<extension name="addonsupport" />
-
+		<extension name="npmtestancillary"/>
 		<extension name="smarteditaddon" />
 		<extension name="smarteditwebservices" />
-
+		<extension name="platformwebservices"/>
 
 
 		<extension name="hmc" />
@@ -46,8 +46,8 @@
 		<extension name="previewpersonalizationweb" />
 		<extension name="smartedit" />
 		<extension name="platformhmc" />
-
-		<!-- ext-template -->
+		<extension name="electronicsstore" />
+		<!-- ext-templat	e -->
 		<extension name="yempty" />
 
 		<!-- <extension name="yscala" /> -->
