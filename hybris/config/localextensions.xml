@@ -1,69 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <hybrisconfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:noNamespaceSchemaLocation="resources/schemas/extensions.xsd">
-	<extensions>
-		<!-- All extensions located in ${HYBRIS_BIN_DIR}/platform/ext are automatically 
-			loaded. More information about how to configure available extensions can 
-			be found here : https://wiki.hybris.com/x/nZVzC -->
+       xsi:noNamespaceSchemaLocation="resources/schemas/extensions.xsd">
+       <extensions>
+              <!-- All extensions located in ${HYBRIS_BIN_DIR}/platform/ext are automatically 
+                     loaded. More information about how to configure available extensions can 
+                     be found here : https://wiki.hybris.com/x/nZVzC -->
 
-		<path dir="${HYBRIS_BIN_DIR}" autoload="false" />
-		<extension name="mcc" />
+              <path dir="${HYBRIS_BIN_DIR}" autoload="false" />
+              <extension name="mcc" />
 
-		<extension name="commercesearchbackoffice" />
+              <extension name="commercesearchbackoffice" />
 
-		<extension name="commerceservicesbackoffice" />
+              <extension name="commerceservicesbackoffice" />
 
-		<extension name="solrfacetsearchbackoffice" />
+              <extension name="solrfacetsearchbackoffice" />
 
-		<extension name="solrserver" />
-		<extension name="addonsupport" />
-
-		<extension name="smarteditaddon" />
-		<extension name="smarteditwebservices" />
-
-
-
-		<extension name="hmc" />
-		<extension name="backoffice" />
-		<extension name="ycommercewebservices" />
-		<extension name="cmswebservices" />
-
-		<extension name="smarteditwebservices" />
-
-		<extension name="cmssmarteditwebservices" />
-
-		<extension name="permissionswebservices" />
-		<extension name="webservicescommons" />
-		<extension name="oauth2" />
-		<extension name="previewwebservices" />
-		<extension name="personalizationservices" />
-
-		<extension name="previewpersonalizationweb" />
-		<extension name="personalizationcmsweb" />
-		<extension name="personalizationsmartedit" />
-		<extension name="personalizationsampledataaddon" />
-		<extension name="cmssmartedit" />
-		<extension name="previewpersonalizationweb" />
-		<extension name="smartedit" />
-		<extension name="platformhmc" />
-
-		<!-- ext-template -->
-		<extension name="yempty" />
-
-		<!-- <extension name="yscala" /> -->
-		<extension
-			dir="${HYBRIS_BIN_DIR}/custom/yTest/yTestfulfilmentprocess" />
-		<extension
-			dir="${HYBRIS_BIN_DIR}/custom/yTest/yTestcore" />
-		<extension
-			dir="${HYBRIS_BIN_DIR}/custom/yTest/yTestinitialdata" />
-		<extension
-			dir="${HYBRIS_BIN_DIR}/custom/yTest/yTestfacades" />
-		<extension
-			dir="${HYBRIS_BIN_DIR}/custom/yTest/yTeststorefront" />
-		<extension
-			dir="${HYBRIS_BIN_DIR}/custom/yTest/yTestcockpits" />
+              <extension name="solrserver" />
+              <extension name="addonsupport" />
+              <extension name="npmtestancillary"/>
+              <extension name="smarteditaddon" />
+              <extension name="smarteditwebservices" />
+              <extension name="platformwebservices"/>
 
 
-	</extensions>
+              <extension name="hmc" />
+              <extension name="backoffice" />
+              <extension name="ycommercewebservices" />
+              <extension name="cmswebservices" />
+
+              <extension name="smarteditwebservices" />
+
+              <extension name="cmssmarteditwebservices" />
+
+              <extension name="permissionswebservices" />
+              <extension name="webservicescommons" />
+              <extension name="oauth2" />
+              <extension name="previewwebservices" />
+              <extension name="personalizationservices" />
+
+              <extension name="previewpersonalizationweb" />
+              <extension name="personalizationcmsweb" />
+              <extension name="personalizationsmartedit" />
+              <extension name="personalizationsampledataaddon" />
+              <extension name="cmssmartedit" />
+              <extension name="previewpersonalizationweb" />
+              <extension name="smartedit" />
+              <extension name="platformhmc" />
+              <extension name="electronicsstore" />
+              <!-- ext-templat     e -->
+              <extension name="yempty" />
+
+              <!-- <extension name="yscala" /> -->
+              <extension
+                     dir="${HYBRIS_BIN_DIR}/custom/yTest/yTestfulfilmentprocess" />
+              <extension
+                     dir="${HYBRIS_BIN_DIR}/custom/yTest/yTestcore" />
+              <extension
+                     dir="${HYBRIS_BIN_DIR}/custom/yTest/yTestinitialdata" />
+              <extension
+                     dir="${HYBRIS_BIN_DIR}/custom/yTest/yTestfacades" />
+              <extension
+                     dir="${HYBRIS_BIN_DIR}/custom/yTest/yTeststorefront" />
+              <extension
+                     dir="${HYBRIS_BIN_DIR}/custom/yTest/yTestcockpits" />
+
+
+       </extensions>
 </hybrisconfig>
