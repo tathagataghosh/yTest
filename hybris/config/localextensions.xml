@@ -25,7 +25,7 @@
 
               <extension name="hmc" />
               <extension name="backoffice" />
-              <extension name="ycommercewebservices" />
+              <!--<extension name="ycommercewebservices" />-->
               <extension name="cmswebservices" />
 
               <extension name="smarteditwebservices" />
@@ -63,6 +63,8 @@
                      dir="${HYBRIS_BIN_DIR}/custom/yTest/yTeststorefront" />
               <extension
                      dir="${HYBRIS_BIN_DIR}/custom/yTest/yTestcockpits" />
+               <extension 
+                     dir="${HYBRIS_BIN_DIR}/custom/yTestcommercewebservices"/>
 
 
        </extensions>
