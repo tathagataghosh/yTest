@@ -63,8 +63,7 @@
 			dir="${HYBRIS_BIN_DIR}/custom/yTest/yTeststorefront" />
 		<extension
 			dir="${HYBRIS_BIN_DIR}/custom/yTest/yTestcockpits" />
- <!-- <extension 
-                     dir="${HYBRIS_BIN_DIR}/custom/yTestcommercewebservices"/> -->
+
          <extension dir="C:\hybrisproject\yTest\hybris\bin/custom/ytestcommerceservices"/>
 
 
